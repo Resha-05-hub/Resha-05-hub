@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    background-color: #f4f4f4; /* Light neutral background */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 25px;
+    background-image: url('https://png.pngtree.com/background/20230616/original/pngtree-close-up-of-several-credit-cards-picture-image_3621584.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixed background for a sleek effect */
+}
+
+.container form {
+    width: 100%;
+    max-width: 700px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.822); /* Slightly darker semi-transparent black */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    backdrop-filter: blur(1px); /* Frosted glass effect */
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.container form .row .col {
+    flex: 1 1 250px;
+}
+
+.col .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4d; /* Softer red tone */
+    padding-bottom: 10px;
+}
+
+.col .inputBox {
+    margin-bottom: 20px;
+}
+
+.col .inputBox label {
+    margin-bottom: 10px;
+    display: block;
+    color: #f9f9f9;
+    font-weight: 500;
+}
+
+.col .inputBox input,
+.col .inputBox select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 8px; /* Softer corners */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.col .inputBox input:focus,
+.col .inputBox select:focus {
+    border-color: #3d17fb; /* Consistent focus state */
+    background: rgba(255, 255, 255, 0.2); /* Slight background highlight */
+}
+
+.col .inputBox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.col .inputBox img {
+    height: 34px;
+    margin-top: 10px;
+    filter: drop-shadow(0 0 3px #000); /* Enhanced shadow for images */
+}
+
+.container form .submit_btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #008f22, #00c851); /* Gradient effect */
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container form .submit_btn:hover {
+    background: linear-gradient(45deg, #3b16f0, #6449e6); /* Hover gradient */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.container form .submit_btn:active {
+    background: linear-gradient(45deg, #2e0f9c, #392bb0); /* Active state */
+    transform: translateY(2px); /* Slight press-down effect */
+}
+
+.container form .inputBox input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Slightly lighter placeholder color */
+}
+
+.container form .inputBox select option {
+    color: black;
+    background: #f4f4f4; /* Lighter dropdown background */
+}
+
+.container form .inputBox select option:disabled {
+    color: rgb(122, 122, 122);
+}
+
+.col .flex {
+    display: flex;
+    gap: 20px;
+}
+
+.col .flex .inputBox {
+    flex: 1;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none; /* Hide number input spin buttons */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .container form {
+        padding: 15px;
+    }
+
+    .container form .row {
+        gap: 15px;
+    }
+
+    .container form .row .col {
+        flex: 1 1 100%;
+    }
+
+    .container form .submit_btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
